@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+
+    color: $accent-color;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.78px;
+    text-decoration: none;
+}
+
+.logo__text {
+    color: $primary-black-color;
+}
