@@ -19,33 +19,56 @@
 
 <header class="page-header">
     <div class="container header-container">
-        <!-- Логотип -->
+        <!-- Logo -->
         <a href="./index.html" class="logo">Web<span class="logo__text">Studio</span></a>
-        <!-- Навигация -->
-        <nav class="page-header__nav">
-            <ul class="site-nav list">
-                <li class="site-nav__item"><a href="./index.html" class="site-nav__link">Студия</a></li>
-                <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфолио</a></li>
-                <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+        <!--Mobile menu button -->
+        <button type="button" 
+                class="menu-button" 
+                aria-expanded="false" 
+                aria-controls="menu-container" 
+                data-menu-button>
+            <svg width="40" 
+                height="40" 
+                aria-label="Переключатель мобильного меню">
+                <use class="icon-close_menu" href="./images/icons.svg#icon-close_menu"></use>
+                <use class="icon-menu_button" href="./images/icons.svg#icon-menu_button"></use>
+            </svg>
+        </button>
+        <!--Mobile menu -->
+        <div class="menu-container" id="menu-container" data-menu>
+            <!-- Навигация -->
+            <nav class="page-header__nav">
+                <ul class="site-nav list">
+                    <li class="site-nav__item"><a href="./index.html"
+                            class="site-nav__link">Студия</a></li>
+                    <li class="site-nav__item"><a href="./portfolio.html" class="site-nav__link site-nav__link--active">Портфолио</a></li>
+                    <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+            <!-- Контакты -->
+            <ul class="contacts list">
+                <li class="contacts__item">
+                    <a href="mailto:info@devstudio.com" class="contacts__link contacts__link--textSize">
+                        <svg class="contacts__icon" width="16px" height="12px">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg>info@devstudio.com
+                    </a>
+                </li>
+                <li class="contacts__item">
+                    <a href="tel:+380961111111" class="contacts__link contacts__link--large">
+                        <svg class="contacts__icon" width="10px" height="16px">
+                            <use href="./images/icons.svg#icon-smartphone"></use>
+                        </svg> +38 096 111 11 11
+                    </a>
+                </li>
             </ul>
-        </nav>
-        <!-- Контакты -->
-        <ul class="contacts list">
-            <li class="contacts__item">
-                <a href="mailto:info@devstudio.com" class="contacts__link">
-                    <svg class="contacts__icon" width="16px" height="12px">
-                        <use href="./images/icons.svg#icon-envelope"></use>
-                    </svg>info@devstudio.com
-                </a>
-            </li>
-            <li class="contact__item">
-                <a href="tel:+380961111111" class="contacts__link">
-                    <svg class="contacts__icon" width="10px" height="16px">
-                        <use href="./images/icons.svg#icon-smartphone"></use>
-                    </svg> +38 096 111 11 11
-                </a>
-            </li>
-        </ul>
+            <ul class="mobile-socialmedia list">
+                <li class="mobile-socialmedia__item"><a href="" class="mobile-socialmedia__link">Instagram</a></li>
+                <li class="mobile-socialmedia__item"><a href="" class="mobile-socialmedia__link">Twitter</a></li>
+                <li class="mobile-socialmedia__item"><a href="" class="mobile-socialmedia__link">Facebook</a></li>
+                <li class="mobile-socialmedia__item"><a href="" class="mobile-socialmedia__link">LinkedIn</a></li>
+            </ul>
+        </div>
     </div>
 </header>
 
@@ -67,7 +90,25 @@
                     <li class="projects__item">
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/technokryak.jpg" alt="Открытый ноутбук со стартовой страницей сайта на экране" width="370" height="292"/>
+                                <picture>
+                                    <source 
+                                    srcset="./images/technokryak-desktop.jpg 1x, ./images/technokryak-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)" 
+                                   />
+                                    <source 
+                                    srcset="./images/technokryak-tablet.jpg 1x, ./images/technokryak-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)" 
+                                    />
+                                    <source 
+                                    srcset="./images/technokryak-mobile.jpg 1x, ./images/technokryak-mobile@2x.jpg 2x" 
+                                    media="(max-width: 767px)" 
+                                    />
+                                
+                                    <img  class="card__image"
+                                    src="./images/technokryak-desktop.jpg" 
+                                    alt="Открытый ноутбук со стартовой страницей сайта на экране" 
+                                    />
+                                </picture>
                                 <div class="card__overlay">
                                    <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. 
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -82,7 +123,19 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/poster.jpg" alt="Два баскетболиста с мячом" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/poster-desktop.jpg 1x, ./images/poster-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" />
+                                    <source srcset="./images/poster-tablet.jpg 1x, ./images/poster-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" />
+                                    <source srcset="./images/poster-mobile.jpg 1x, ./images/poster-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" />
+                                
+                                    <img class="card__image" 
+                                    src="./images/poster-desktop.jpg"
+                                    alt="Два баскетболиста с мячом"
+                                    />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -97,7 +150,18 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/seafood.jpg" alt="Логотип ресторана Seafood" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/seafood-desktop.jpg 1x, ./images/seafood-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/seafood-tablet.jpg 1x, ./images/seafood-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/seafood-mobile.jpg 1x, ./images/seafood-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                    
+                                    <img class="card__image" 
+                                    src="./images/seafood-desktop.jpg" 
+                                    alt="Логотип ресторана Seafood" />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -112,7 +176,18 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/prime.jpg" alt="Черные наушники" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/prime-desktop.jpg 1x, ./images/prime-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/prime-tablet.jpg 1x, ./images/prime-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/prime-mobile.jpg 1x, ./images/prime-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                    
+                                    <img class="card__image" 
+                                    src="./images/prime-desktop.jpg" 
+                                    alt="Черные наушники" />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -127,7 +202,18 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/boxes.jpg" alt="Две прямоугольные коробки: белая и крафтовая" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/boxes-desktop.jpg 1x, ./images/boxes-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/boxes-tablet.jpg 1x, ./images/boxes-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/boxes-mobile.jpg 1x, ./images/boxes-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                
+                                    <img class="card__image" 
+                                    src="./images/boxes-desktop.jpg" 
+                                    alt="Две прямоугольные коробки: белая и крафтовая" />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -142,7 +228,18 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/inspiration.jpg" alt="Монитор со стартовой страницей сайта Inspiration has no Borders на экране" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/inspiration-desktop.jpg 1x, ./images/inspiration-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/inspiration-tablet.jpg 1x, ./images/inspiration-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/inspiration-mobile.jpg 1x, ./images/inspiration-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                
+                                    <img class="card__image" 
+                                    src="./images/inspiration-desktop.jpg" 
+                                    alt="Монитор со стартовой страницей сайта Inspiration has no Borders на экране" />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -157,7 +254,18 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/limed.jpg" alt="Разворот журнала с заголовком I'am Limited Edition" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/limed-desktop.jpg 1x, ./images/limed-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/limed-tablet.jpg 1x, ./images/limed-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/limed-mobile.jpg 1x, ./images/limed-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                
+                                    <img class="card__image" 
+                                    src="./images/limed-desktop.jpg" 
+                                    alt="Разворот журнала с заголовком I'am Limited Edition"/>
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -172,7 +280,18 @@
                     <li class="projects__item">  
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/lab.jpg" alt="Навесной ярлык для одежды с надписью LAB EL TAG" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/lab-desktop.jpg 1x, ./images/lab-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/lab-tablet.jpg 1x, ./images/lab-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/lab-mobile.jpg 1x, ./images/lab-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                
+                                    <img class="card__image" 
+                                    src="./images/lab-desktop.jpg" 
+                                    alt="Навесной ярлык для одежды с надписью LAB EL TAG" />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -187,7 +306,18 @@
                     <li class="projects__item"> 
                         <a href="" class="card">
                             <div class="card__thumb">
-                                <img class="card__image" src="./images/growbusiness.jpg" alt="Две руки на клавиатуре ноутбука" width="370" height="292"/>
+                                <picture>
+                                    <source srcset="./images/growbusiness-desktop.jpg 1x, ./images/growbusiness-desktop@2x.jpg 2x" 
+                                    media="(min-width: 1200px)" />
+                                    <source srcset="./images/growbusiness-tablet.jpg 1x, ./images/growbusiness-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" />
+                                    <source srcset="./images/growbusiness-mobile.jpg 1x, ./images/growbusiness-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" />
+                                
+                                    <img class="card__image" 
+                                    src="./images/growbusiness-desktop.jpg" 
+                                    alt="Две руки на клавиатуре ноутбука" />
+                                </picture>
                                 <div class="card__overlay">
                                     <p class="card__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                         Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -267,6 +397,6 @@
         </div>
     </div>
 </footer>
+<script src="./js/mobile-menu.js"></script>
 </body>
-
 </html>

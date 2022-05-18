@@ -28,6 +28,12 @@
     }
 }
 
+.checkbox__icontext {
+    @media screen and (max-width:1200px) {
+        font-size: 12px;
+    }
+}
+
 .checkbox__input {
     position: absolute;
     width: 1px;
@@ -45,4 +51,8 @@
     line-height: 1.71;
     letter-spacing: 0.42px;
     padding-left: 3px;
+
+    @media screen and (max-width:1200px) {
+        font-size: 12px;
+        }
 }
